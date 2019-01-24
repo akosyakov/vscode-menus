@@ -1,0 +1,214 @@
+{
+    "name": "vscode-menus",
+    "displayName": "vscode-menus",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.helloWorld"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.explorer.context.navigation",
+                "title": "TEST extension.explorer.context.navigation"
+            },
+            {
+                "command": "extension.explorer.context.2_workspace",
+                "title": "TEST extension.explorer.context.2_workspace"
+            },
+            {
+                "command": "extension.explorer.context.3_compare",
+                "title": "TEST extension.explorer.context.3_compare"
+            },
+            {
+                "command": "extension.explorer.context.4_search",
+                "title": "TEST extension.explorer.context.4_search"
+            },
+            {
+                "command": "extension.explorer.context.5_cutcopypaste",
+                "title": "TEST extension.explorer.context.5_cutcopypaste"
+            },
+            {
+                "command": "extension.explorer.context.7_modification",
+                "title": "TEST extension.explorer.context.7_modification"
+            },
+            {
+                "command": "extension.editor.context.navigation",
+                "title": "TEST extension.editor.context.navigation"
+            },
+            {
+                "command": "extension.editor.context.1_modification",
+                "title": "TEST extension.editor.context.1_modification"
+            },
+            {
+                "command": "extension.editor.context.9_cutcopypaste",
+                "title": "TEST extension.editor.context.9_cutcopypaste"
+            },
+            {
+                "command": "extension.editor.context.z_commands",
+                "title": "TEST extension.editor.context.z_commands"
+            },
+            {
+                "command": "extension.editor.title.1_diff",
+                "title": "TEST extension.editor.title.1_diff",
+                "icon": {
+                    "light": "./media/Preview.svg",
+                    "dark": "./media/Preview_inverse.svg"
+                }
+            },
+            {
+                "command": "extension.editor.title.3_open",
+                "title": "TEST extension.editor.title.3_open",
+                "icon": {
+                    "light": "./media/PreviewOnRightPane_16x.svg",
+                    "dark": "./media/PreviewOnRightPane_16x_dark.svg"
+                }
+            },
+            {
+                "command": "extension.editor.title.5_close",
+                "title": "TEST extension.editor.title.5_close",
+                "icon": {
+                    "light": "./media/ViewSource.svg",
+                    "dark": "./media/ViewSource_inverse.svg"
+                }
+            },
+            {
+                "command": "extension.debug.callstack.context",
+                "title": "TEST extension.debug.callstack.context"
+            },
+            {
+                "command": "extension.debug.callstack.context.session",
+                "title": "TEST extension.debug.callstack.context.session"
+            },
+            {
+                "command": "extension.debug.callstack.context.thread",
+                "title": "TEST extension.debug.callstack.context.thread"
+            },
+            {
+                "command": "extension.debug.callstack.context.stackFrame",
+                "title": "TEST extension.debug.callstack.context.stackFrame"
+            },
+            {
+                "command": "extension.debug.callstack.context.all",
+                "title": "TEST extension.debug.callstack.context.all"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.explorer.context.navigation",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.explorer.context.2_workspace",
+                    "group": "2_workspace"
+                },
+                {
+                    "command": "extension.explorer.context.3_compare",
+                    "group": "3_compare"
+                },
+                {
+                    "command": "extension.explorer.context.4_search",
+                    "group": "4_search"
+                },
+                {
+                    "command": "extension.explorer.context.5_cutcopypaste",
+                    "group": "5_cutcopypaste"
+                },
+                {
+                    "command": "extension.explorer.context.7_modification",
+                    "group": "7_modification"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "extension.editor.context.navigation",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.editor.context.1_modification",
+                    "group": "1_modification"
+                },
+                {
+                    "command": "extension.editor.context.9_cutcopypaste",
+                    "group": "9_cutcopypaste"
+                },
+                {
+                    "command": "extension.editor.context.z_commands",
+                    "group": "z_commands"
+                }
+            ],
+            "editor/title": [
+                {
+                    "command": "extension.editor.title.1_diff",
+                    "group": "1_diff"
+                },
+                {
+                    "command": "extension.editor.title.3_open",
+                    "group": "3_open"
+                },
+                {
+                    "command": "extension.editor.title.5_close",
+                    "group": "5_close"
+                }
+            ],
+            "debug/callstack/context": [
+                {
+                    "command": "extension.debug.callstack.context",
+                    "group": "navigation",
+                    "when": "inDebugMode"
+                },
+                {
+                    "command": "extension.debug.callstack.context.session",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'session'"
+                },
+                {
+                    "command": "extension.debug.callstack.context.thread",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'thread'"
+                },
+                {
+                    "command": "extension.debug.callstack.context.stackFrame",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'stackFrame'"
+                },
+                {
+                    "command": "extension.debug.callstack.context.all",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'session'"
+                },
+                {
+                    "command": "extension.debug.callstack.context.all",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'thread'"
+                },
+                {
+                    "command": "extension.debug.callstack.context.all",
+                    "group": "navigation",
+                    "when": "inDebugMode && callStackItemType == 'stackFrame'"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "yarn run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^3.1.4",
+        "vscode": "^1.1.25",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
