@@ -19,7 +19,9 @@ export function activate(context: vscode.ExtensionContext) {
         'extension.debug.callstack.context.session', // arg should be undefined
         'extension.debug.callstack.context.thread', // arg should be thread id
         'extension.debug.callstack.context.stackFrame', // arg should be path or Uri
-        'extension.debug.callstack.context.all' // several menus for the same command
+        'extension.debug.callstack.context.all', // several menus for the same command
+        'extension.bpm',
+        'extension.yaml'
     ]) {
         context.subscriptions.push(
             vscode.commands.registerCommand(command, (arg: any) =>
